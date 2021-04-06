@@ -1,17 +1,28 @@
 import React from 'react';
+import Site from './Site'
 
-const element1 = (
-  <h1 className="title">
-    <a href="https://google.com"> google</a>
-  </h1>
-);
+class App extends React.Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    name: "Marco",
+  };
+}
 
+componentDidMount() {
+  setInterval(() => this.setState({name: "Max"}), 5000)
+}
 
-function App(props) {
-  const style = {color: "blue"}
-    return   <h1 style = {style}>
-     <p>{props.text}</p>
-  </h1>;
+  render() {
+    return (
+  <>
+    <Site name= {this.state.name}></Site>
+    <Site name= "VK"></Site>
+    <Site name= "Google"></Site>
+    <Site name= "Yandex"></Site>
+  </>
+    );
+  }
 }
 
 
