@@ -8,5 +8,5 @@ import App from "./App"
 //   {className: "title"}, 
 //   React.createElement("a", {href:"https://google.com"}, "lololo"));
 
-ReactDOM.render(<App/>,document.getElementById('root'));
+ReactDOM.render(<App text = "Hello TMS"/>,document.getElementById('root'));
 

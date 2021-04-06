@@ -7,12 +7,11 @@ const element1 = (
 );
 
 
-function App() {
+function App(props) {
   const style = {color: "blue"}
-    return   <p style = {style}>
-      {element1}
-    <a href="https://yandex.by">yandex</a>
-  </p>;
+    return   <h1 style = {style}>
+     <p>{props.text}</p>
+  </h1>;
 }
 
 
