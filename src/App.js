@@ -5,21 +5,24 @@ class App extends React.Component {
 constructor(props) {
   super(props);
   this.state = {
-    name: "Marco",
+    counter: 0,
   };
 }
 
-componentDidMount() {
-  setInterval(() => this.setState({name: "Max"}), 5000)
+handleClick = () => {
+      this.setState((state) => ({counter: state.counter + 1}))
 }
 
   render() {
     return (
   <>
-    <Site name= {this.state.name}></Site>
+    <Site name= {this.props.text}></Site>
     <Site name= "VK"></Site>
     <Site name= "Google"></Site>
     <Site name= "Yandex"></Site>
+    <p onClick={this.handleClick}>
+      counter: {this.state.counter}
+    </p>
   </>
     );
   }
